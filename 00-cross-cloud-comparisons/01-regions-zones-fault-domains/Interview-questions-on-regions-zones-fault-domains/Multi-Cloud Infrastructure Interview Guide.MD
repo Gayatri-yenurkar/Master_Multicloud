@@ -1,7 +1,8 @@
-Multi-Cloud Infrastructure Interview Guide: Regions, Zones, and Fault Domains
+# **Multi-Cloud Infrastructure Interview Guide: Regions, Zones, and Fault Domains**
+
 This guide contains production-level interview questions and scenario-based technical deep-dives focused on multi-cloud infrastructure design across AWS, Azure, GCP, and OCI. It covers geographic isolation, data center boundaries, and hardware rack-level resiliency.
 
-Part 1: Structural Mapping & Terminology (Mid-Level)
+## **Part 1: Structural Mapping & Terminology (Mid-Level)**
 Q1: Translate how a hardware-level "Fault Domain" in Oracle Cloud Infrastructure (OCI) or Azure maps to AWS and GCP environments.
 Interviewer Intent: Testing whether the candidate understands the lowest physical layer of cloud infrastructure (server rack level) across different vendors.
 
@@ -24,7 +25,7 @@ Fault Domains / Placement Groups protect against localized hardware-level failur
 
 Architectural Note: If an entire AZ goes offline due to a massive power grid failure, your Fault Domains inside that AZ are useless. True high availability requires cross-AZ/cross-Zone distribution.
 
-Part 2: Scenario-Based Architecture Problems (Senior Level)
+## **Part 2: Scenario-Based Architecture Problems (Senior Level)**
 Q3: "We are hosting an application frontend in AWS us-east-1 (N. Virginia) and our transactional database in OCI us-ashburn-1 (N. Virginia). During a traffic spike, application latency spikes dramatically, but CPU and memory utilization across both clouds are under 40%. What infrastructure design flaw should you investigate?"
 Interviewer Intent: Testing the candidate's understanding of the #1 multi-cloud pitfall: cross-cloud network routing and geographic region matching.
 
@@ -47,7 +48,7 @@ You should deploy your database nodes in multiples of three and distribute them 
 
 Configure your application logic or database load balancer to treat these FDs as virtual zones. Because OCI guarantees that no two FDs within an AD share the same power supply or top-of-rack network switches, a physical hardware failure on a rack will only take down one node, leaving the other two FDs operational to maintain cluster quorum.
 
-Part 3: Advanced Core Boundaries & "Gotchas" (Lead / Principal Level)
+## **Part 3: Advanced Core Boundaries & "Gotchas" (Lead / Principal Level)**
 Q5: "Can you design a single Virtual Private Cloud (VPC) subnet or virtual network that spans across an AWS Availability Zone and a GCP Zone simultaneously to simplify cluster networking?"
 Interviewer Intent: Verifying if the candidate knows the absolute technical boundaries of cloud-native networking layers.
 

@@ -1,8 +1,9 @@
-Cloud Infrastructure Interview Guide: AWS, Azure, and GCP (Provider-Specific)
+# **Cloud Infrastructure Interview Guide: AWS, Azure, and GCP (Provider-Specific)**
 
 This file contains targeted interview questions and scenario-based technical deep-dives for individual cloud providers. Each section focuses exclusively on that provider's native terminology, architecture, and deployment constraints regarding Regions, Zones, and Hardware Resiliency.
 
-Section 1: Amazon Web Services (AWS)
+## **Section 1: Amazon Web Services (AWS)**
+
 Q1: What is the architectural difference between an AWS Availability Zone (AZ) and an AWS Local Zone?
 Interviewer Intent: Testing knowledge of edge computing and specialized AWS infrastructure tiers.
 
@@ -30,7 +31,8 @@ No, it will not. An AWS Auto Scaling Group is a regional resource bounded strict
 
 To survive a total regional failure, you must architect a Cross-Region Disaster Recovery strategy. This requires setting up a separate ASG in eu-central-1, configuring cross-region database replication (such as Aurora Global Databases), and using Route 53 Application Recovery Controller or latency/failover routing policies to redirect DNS traffic to the secondary region.
 
-Section 2: Microsoft Azure
+## **Section 2: Microsoft Azure**
+
 Q1: Explain the difference between an Azure Availability Zone and an Azure Availability Set. When would you use each?
 Interviewer Intent: Testing the candidate's understanding of Azure’s legacy vs. modern high-availability primitives.
 
@@ -58,7 +60,8 @@ To achieve the absolute lowest possible network latency, you must deploy the VMs
 
 A PPG is a logical grouping capability that forces Azure to physically locate your virtual machines as close to each other as possible within the same physical data center building, down to the same server rack or adjacent racks. This minimizes physical fiber distance and reduces network round-trip time (RTT).
 
-Section 3: Google Cloud Platform (GCP)
+## **Section 3: Google Cloud Platform (GCP)**
+
 Q1: In GCP Compute Engine, what is the functional difference between a Regional Managed Instance Group (MIG) and a Zonal MIG?
 Interviewer Intent: Assessing understanding of Google's multi-zone automation and orchestration layers.
 
@@ -86,7 +89,8 @@ A GCP Multi-Region geo-replicates data across a wide, generalized geographic are
 
 A GCP Dual-Region allows you to explicitly choose exactly two specific regions within a continent (e.g., Iowa and South Carolina). This provides turbo-charged replication features (such as Turbo Replication, which guarantees data is replicated between the two distinct regional boundaries within 15 minutes), meeting strict compliance and data residency laws while still offering full geo-redundancy if one region goes completely offline.
 
-Section 4: Oracle Cloud Infrastructure (OCI)
+## **Section 4: Oracle Cloud Infrastructure (OCI)**
+
 Q1: What is the structural difference between an OCI Availability Domain (AD) and an OCI Fault Domain (FD), and how do they dictate your high-availability strategy?
 Interviewer Intent: Verifying the candidate understands OCI's core physical infrastructure boundaries.
 
