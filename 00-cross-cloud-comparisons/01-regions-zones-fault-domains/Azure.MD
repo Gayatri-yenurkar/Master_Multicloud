@@ -10,4 +10,4 @@
 
 ## **3. Fault Domain / FD (The Hardware Layer)**
 
-"A Fault Domain represents a single physical server rack inside the data center. By ensuring our virtual machines are distributed across different Fault Domains—usually via an Availability Set—we protect the application from a localized rack failure, like a blown power supply."
+In Azure, the underlying physical failure boundary—essentially a single server rack sharing power and network switches—is called a Fault Domain. However, as an architect, you don't pick the rack manually. You deploy your Virtual Machines into an Availability Set (or a Virtual Machine Scale Set), and Azure automatically distributes them across multiple Fault Domains to protect against localized hardware failures."  
