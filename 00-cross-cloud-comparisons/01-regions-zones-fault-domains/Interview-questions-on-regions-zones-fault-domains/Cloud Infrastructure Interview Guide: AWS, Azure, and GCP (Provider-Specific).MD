@@ -1,4 +1,5 @@
 Cloud Infrastructure Interview Guide: AWS, Azure, and GCP (Provider-Specific)
+
 This file contains targeted interview questions and scenario-based technical deep-dives for individual cloud providers. Each section focuses exclusively on that provider's native terminology, architecture, and deployment constraints regarding Regions, Zones, and Hardware Resiliency.
 
 Section 1: Amazon Web Services (AWS)

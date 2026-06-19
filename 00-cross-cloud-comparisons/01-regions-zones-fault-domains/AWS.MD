@@ -1,4 +1,5 @@
-☁️ Amazon Web Services (AWS)
+**☁️ Amazon Web Services (AWS)**
+
 1. AWS Region (The Geographic Layer)
 
 "An AWS Region is a specific geographic location—like Northern Virginia or Tokyo—where AWS operates multiple, isolated data center clusters. If an entire region goes down due to a massive natural disaster, we rely on cross-region replication to keep the business running."

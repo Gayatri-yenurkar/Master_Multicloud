@@ -1,4 +1,4 @@
-☁️ Google Cloud Platform (GCP)
+**☁️ Google Cloud Platform (GCP)**
 
 1. GCP Region (The Geographic Layer)
 

@@ -1,4 +1,5 @@
-☁️ Oracle Cloud Infrastructure (OCI)
+**☁️ Oracle Cloud Infrastructure (OCI)**
+
 1. OCI Region (The Geographic Layer)
 
 "An OCI Region is a localized geographic area containing Oracle's data centers. We strategically choose our primary and secondary regions to minimize latency for our users and to provide a failover site in case of a major geographic disaster."

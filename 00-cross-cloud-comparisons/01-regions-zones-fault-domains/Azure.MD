@@ -1,4 +1,5 @@
-☁️ Microsoft Azure
+**☁️ Microsoft Azure**
+
 1. Azure Region (The Geographic Layer)
 
 "An Azure Region is a designated perimeter on the globe containing one or more data centers. We use distinct regions to comply with data residency laws and to survive massive, city-wide disasters."
